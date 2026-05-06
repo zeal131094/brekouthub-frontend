@@ -1,6 +1,7 @@
 ﻿import axios from 'axios';
 
-const BACKEND_URL = import.meta.env.VITE_API_URL || 'https://brekouthub-backend.onrender.com';
+// VITE_BACKEND_URL takes priority; falls back to Render.com production backend
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://brekouthub-backend.onrender.com';
 
 const api = axios.create({
   baseURL: BACKEND_URL,
